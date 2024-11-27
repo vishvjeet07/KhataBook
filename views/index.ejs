@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HisabKitab</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Header and Navigation Container -->
+    <div class="header-nav-container">
+        <div class="header">HisabKitab</div>
+        
+        <!-- Navigation Links -->
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="createhisab">Create New Hisab</a>
+        </div>
+    </div>
+
+    <!-- File List -->
+    <div class="file-list">
+        <% if (files.length === 0) { %>
+            <div class="no-files">No files found in the directory.</div>
+        <% } else { %>
+            <% files.forEach(file => { %>
+                <div class="file-item">
+                    <span class="file-name"><%= file.split(".")[0] %></span>
+                    <div class="actions">
+                        <a href="/read/<%= file %>" class="read">Read</a>
+                        <a href="/edit/<%= file %>" class="edit">Edit</a>
+                        <a href="/delete/<%= file %>" class="delete">Delete</a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

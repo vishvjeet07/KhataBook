@@ -1,0 +1,169 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header and Navigation Container */
+.header-nav-container {
+    display: flex;
+    justify-content: space-between; /* Positions header on the left and nav on the right */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 20px; /* Adds padding to create space from edges */
+    max-width: 1200px; /* Limit width to keep things centered on large screens */
+}
+
+/* Header styling */
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 0.5px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.nav a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* File list container */
+.file-list {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+/* Individual file item styling */
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+.file-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* File name styling */
+.file-name {
+    font-size: 18px;
+    color: #333;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Action buttons styling */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions a {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.actions .read {
+    background-color: #007bff;
+}
+
+.actions .read:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.actions .delete {
+    background-color: #dc3545;
+}
+
+.actions .delete:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+.actions .edit {
+    background-color: #ffa500; /* Orange */
+}
+
+.actions .edit:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
+    transform: scale(1.1);
+}
+/* Message when no files are found */
+.no-files {
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+}
+/* Style for the alert container */
+.alert-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style for the alert message */
+.alert {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #f44336; /* Red color for alert */
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility:hidden;
+}
+
+/* Show alert when active */
+.alert-message {
+    opacity: 1;
+    visibility: visible;
+}
+
+

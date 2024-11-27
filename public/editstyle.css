@@ -1,0 +1,48 @@
+/* Example CSS to style the edit page
+
+
+
+/* Style for the textarea */
+textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+    outline: none;
+}
+
+/* Focus state for textarea */
+textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+/* Placeholder styling for textarea */
+textarea::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
